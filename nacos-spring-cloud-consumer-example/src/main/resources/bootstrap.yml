@@ -1,0 +1,19 @@
+server:
+  port: 28001
+spring:
+  application:
+    name: nacos-consumer  # Spring 应用名
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      # 注册中心
+      discovery:
+        server-addr: 10.0.3.75:8848
+        namespace: abd48ead-a6bd-483c-a39b-eaca7816ca37 # 命名空间
+      # 配置中心
+      config:
+        server-addr: 10.0.3.75:8848
+        namespace: abd48ead-a6bd-483c-a39b-eaca7816ca37 # 命名空间
+        file-extension: yml
+
